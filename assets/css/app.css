@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0d192b;
+  display: grid;
+  place-items: center;
+}
+.container .card {
+  color: white;
+  padding: 1.5rem;
+  background-color: #14253d;
+  border-radius: 1rem;
+  max-width: 300px;
+  box-shadow: 0 5px 20px 10px rgba(8, 19, 36, 0.4);
+}
+.container .card__thumbnail {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+}
+.container .card__thumbnail img {
+  max-width: 100%;
+}
+.container .card__thumbnail img, .container .card__thumbnail:before {
+  border-radius: 0.5rem;
+}
+.container .card__thumbnail:hover:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 255, 247, 0.5);
+  position: absolute;
+}
+.container .card__thumbnail:hover:after {
+  content: "";
+  display: block;
+  background: url("../images/icon-view.svg");
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.container .card__title {
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+}
+.container .card__title:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
+.container .card__description {
+  color: #8bacda;
+  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-top: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.container .card__details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+.container .card__details span {
+  display: flex;
+  align-items: center;
+}
+.container .card__details span img {
+  margin-right: 0.5rem;
+}
+.container .user-details {
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.container .user-details img {
+  width: 30px;
+  margin-right: 1rem;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+.container .user-details:hover img {
+  border: 1px solid white;
+}
+.container .user-details:hover .user-details__name {
+  color: #00fff7;
+}
+.container .divider {
+  height: 1px;
+  width: 100%;
+  background-color: #2f415b;
+  margin: 1.4rem 0;
+}
+
+.color-primary {
+  color: #00fff7;
+}
+
+.color-soft-blue {
+  color: #8bacda;
+}
+
+@media (max-width: 768px) {
+  html,
+body {
+    font-size: 15px;
+  }
+}
